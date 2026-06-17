@@ -93,8 +93,54 @@ function initNav() {
   });
 }
 
+function initSlideshows() {
+  document.querySelectorAll('[data-slideshow]').forEach((root) => {
+    const slides = [...root.querySelectorAll('.slideshow-slide')];
+    const caption = root.querySelector('.slideshow-caption');
+    const dots = [...root.querySelectorAll('.slideshow-dot')];
+    const prev = root.querySelector('[data-slide-prev]');
+    const next = root.querySelector('[data-slide-next]');
+    let index = slides.findIndex((s) => s.classList.contains('is-active'));
+    if (index < 0) index = 0;
+
+    const goTo = (i) => {
+      index = (i + slides.length) % slides.length;
+      slides.forEach((slide, n) => {
+        const active = n === index;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', String(!active));
+      });
+      dots.forEach((dot, n) => {
+        const active = n === index;
+        dot.classList.toggle('is-active', active);
+        dot.setAttribute('aria-selected', String(active));
+      });
+      if (caption) {
+        caption.textContent = slides[index].dataset.caption || '';
+      }
+    };
+
+    prev?.addEventListener('click', () => goTo(index - 1));
+    next?.addEventListener('click', () => goTo(index + 1));
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => goTo(Number(dot.dataset.slideTo)));
+    });
+
+    root.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') goTo(index - 1);
+      if (e.key === 'ArrowRight') goTo(index + 1);
+    });
+
+    slides.forEach((slide, n) => {
+      slide.setAttribute('aria-hidden', String(n !== index));
+    });
+    goTo(index);
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderProjects();
   observeReveals(document.querySelectorAll('.reveal'));
   initNav();
+  initSlideshows();
 });
