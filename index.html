@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ben Teigland. Electrical Engineer and Physics graduate. PCB design, sensors, and embedded systems.">
+  <title>Ben Teigland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230d0d0f'/><text x='16' y='22' text-anchor='middle' font-family='monospace' font-size='18' fill='%23e8a54b'>B</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav class="nav" aria-label="Primary">
+    <a class="nav-logo" href="#">BT</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main">
+    <header class="hero">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <p class="hero-eyebrow">Minnesota · Open to opportunities</p>
+          <h1 class="hero-title">
+            <span class="hero-name">Ben Teigland</span>
+          </h1>
+          <p class="hero-subtitle">
+            Electrical Engineer &amp; Physicist building infrastructure for
+            <em>careful</em> AI experimentation
+          </p>
+          <p class="hero-bio">
+            B.S. Electrical Engineering · B.A. Physics · Solo developer focused on
+            agent tooling, reusable engineering assets, and systems you can measure.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">View work</a>
+            <a class="btn btn-ghost" href="https://github.com/benteigland11" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-ghost" href="mailto:benteigland11@gmail.com">Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>scroll</span>
+        <svg width="12" height="20" viewBox="0 0 12 20" fill="none"><path d="M6 1v16M1 11l5 5 5-5" stroke="currentColor" stroke-width="1.5"/></svg>
+      </div>
+    </header>
+
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-index">01</span>
+          <h2>About</h2>
+        </div>
+        <div class="about-grid reveal" data-delay="100">
+          <div class="about-lead">
+            <p>
+              I sit at the intersection of hardware thinking and software craft,
+              trained in electrical engineering and physics, now building boards,
+              sensor systems, and the tooling that supports careful engineering work.
+            </p>
+          </div>
+          <div class="about-details">
+            <dl class="detail-list">
+              <div>
+                <dt>Education</dt>
+                <dd>B.S. Electrical Engineering<br>B.A. Physics</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Agent orchestration, PCB design, widget registries, code validation</dd>
+              </div>
+              <div>
+                <dt>Approach</dt>
+                <dd>Measure first. Reuse over rewrite. Native language validation over brittle wrappers.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-index">02</span>
+          <h2>Projects</h2>
+        </div>
+
+        <article class="spotlight reveal" data-delay="50">
+          <div class="spotlight-media">
+            <img
+              src="assets/projects/lsm6dsv320x/3D_LSM6DSV320XTR.png"
+              alt="3D render of the LSM6DSV320XTR breakout board PCB"
+              width="640"
+              height="480"
+              loading="eager"
+            >
+          </div>
+          <div class="spotlight-content">
+            <div class="project-meta">
+              <span class="project-lang">Hardware · KiCad</span>
+              <span class="project-featured">Featured</span>
+            </div>
+            <h3 class="spotlight-title">LSM6DSV320XTR Breakout Board</h3>
+            <p class="spotlight-desc">
+              MPU 6050 form factor breakout for STMicro’s dual range IMU, ±16G and ±320G
+              accelerometers plus a ±4000&nbsp;dps gyro, built for Bethel Rocket Club and the
+              open source community. Drop in replacement footprint with 10 pin headers, onboard
+              LDO, and I2C/SPI/Mode&nbsp;2 pinout. PCB spun through JLCPCB. Hand soldering
+              in progress; first assembly attempt didn’t succeed, still iterating.
+            </p>
+            <dl class="spotlight-specs">
+              <div>
+                <dt>Sensor</dt>
+                <dd>LSM6DSV320XTR, dual accelerometer and gyro</dd>
+              </div>
+              <div>
+                <dt>Interfaces</dt>
+                <dd>I2C, SPI, I3C (3.3&nbsp;V logic)</dd>
+              </div>
+              <div>
+                <dt>Fabrication</dt>
+                <dd>JLCPCB PCB fab · hand assembly (ongoing)</dd>
+              </div>
+            </dl>
+            <div class="spotlight-actions">
+              <a
+                class="btn btn-primary"
+                href="assets/projects/lsm6dsv320x/Schematic_LSM6DSV320XTR.pdf"
+                target="_blank"
+                rel="noopener"
+              >View schematic</a>
+              <a
+                class="btn btn-ghost"
+                href="assets/projects/lsm6dsv320x/DesignGuidev2.pdf"
+                target="_blank"
+                rel="noopener"
+              >Design guide</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="spotlight reveal" data-delay="75">
+          <div class="spotlight-media">
+            <img
+              src="assets/projects/stm_mcu/top_down.png"
+              alt="Top down view of the Altitude Prediction Module PCB"
+              width="640"
+              height="480"
+              loading="lazy"
+            >
+          </div>
+          <div class="spotlight-content">
+            <div class="project-meta">
+              <span class="project-lang">Hardware · KiCad</span>
+              <span class="project-featured">Featured</span>
+            </div>
+            <h3 class="spotlight-title">Altitude Prediction Module</h3>
+            <p class="spotlight-desc">
+              Version&nbsp;2 flight computer, 4 layer PCB with STM32L412 MCU, BMP388
+              barometric pressure sensor, and MPU 6050 IMU for fused altitude estimation.
+              USB micro programming, expansion headers, and dedicated analog and digital power
+              domains for clean sensor reads in a rocket payload bay. Manufactured via
+              JLCPCB and flown on a rocket.
+            </p>
+            <dl class="spotlight-specs">
+              <div>
+                <dt>MCU</dt>
+                <dd>STM32L412KBTx, Cortex M4, 128&nbsp;KB flash, 80&nbsp;MHz</dd>
+              </div>
+              <div>
+                <dt>Sensors</dt>
+                <dd>BMP388 barometer and MPU 6050 6 axis IMU</dd>
+              </div>
+              <div>
+                <dt>Fabrication &amp; flight</dt>
+                <dd>JLCPCB assembly · flown on a rocket launch</dd>
+              </div>
+            </dl>
+            <div class="spotlight-actions">
+              <a
+                class="btn btn-primary"
+                href="assets/projects/stm_mcu/MyVersion2.pdf"
+                target="_blank"
+                rel="noopener"
+              >View schematic</a>
+              <a
+                class="btn btn-ghost"
+                href="assets/projects/stm_mcu/output.pdf"
+                target="_blank"
+                rel="noopener"
+              >Board layout</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="spotlight spotlight--software reveal" data-delay="90">
+          <div class="spotlight-media spotlight-media--cartograph">
+            <div class="cartograph-brand">
+              <img
+                src="assets/projects/cartograph/logo.svg"
+                alt=""
+                class="cartograph-logo"
+                width="112"
+                height="112"
+              >
+              <p class="cartograph-wordmark">Cartograph</p>
+              <p class="cartograph-tagline">widget library manager</p>
+            </div>
+            <a
+              class="cartograph-video"
+              href="https://youtu.be/gezC-UbX_Iw"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="assets/projects/cartograph/demo-thumb.jpg"
+                alt="Introduction to Cartograph for Agentic Coding, Cartograph EP1"
+                width="640"
+                height="360"
+                loading="lazy"
+              >
+              <span class="cartograph-video-play" aria-hidden="true"></span>
+              <span class="cartograph-video-label">Cartograph EP1</span>
+            </a>
+            <div class="cartograph-workflow" aria-label="Example Cartograph workflow">
+              <p class="cartograph-workflow-label">widget lifecycle</p>
+              <pre class="cartograph-workflow-code"><code><span class="tok-prompt">$</span> cartograph search "retry backoff"
+<span class="tok-prompt">$</span> cartograph install backend-retry-backoff-python
+<span class="tok-dim"># make edits based on bugs found in use</span>
+<span class="tok-prompt">$</span> cartograph validate cg/backend_retry_backoff_python
+<span class="tok-ok">validate</span>  <span class="tok-dim">tests · coverage · examples · PASS</span>
+<span class="tok-prompt">$</span> cartograph checkin --reason "hardened edge cases"</code></pre>
+            </div>
+          </div>
+          <div class="spotlight-content">
+            <div class="project-meta">
+              <span class="project-lang">AI Tooling · Python</span>
+              <span class="project-featured project-featured--gold">Crown jewel</span>
+            </div>
+            <h3 class="spotlight-title">Cartograph</h3>
+            <p class="spotlight-desc">
+              Local first reusable code registry for AI agents. Widgets bundle code,
+              tests, examples, and metadata; nothing enters the library until native
+              language validation actually runs. Search, install, validate, and checkin
+              across projects so agents reuse proven work instead of re-deriving the
+              same logic from scratch.
+            </p>
+            <dl class="spotlight-specs">
+              <div>
+                <dt>Core idea</dt>
+                <dd>Proof, not storage. Validated widgets as durable agent memory.</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>CLI, cloud registry, MCP server, Claude and Codex plugins</dd>
+              </div>
+              <div>
+                <dt>Languages</dt>
+                <dd>Python, Nim, JS/TS, OpenSCAD, SystemVerilog, Terraform, and more</dd>
+              </div>
+            </dl>
+            <div class="spotlight-actions">
+              <a
+                class="btn btn-primary"
+                href="https://github.com/benteigland11/Cartograph"
+                target="_blank"
+                rel="noopener"
+              >GitHub</a>
+              <a
+                class="btn btn-ghost"
+                href="https://pypi.org/project/cartograph-cli/"
+                target="_blank"
+                rel="noopener"
+              >PyPI</a>
+              <a
+                class="btn btn-ghost"
+                href="https://youtu.be/gezC-UbX_Iw"
+                target="_blank"
+                rel="noopener"
+              >Watch EP1</a>
+              <a
+                class="btn btn-ghost"
+                href="https://www.youtube.com/playlist?list=PLG7OfTaefviJ4RIVtfOHRImppor3bidK-"
+                target="_blank"
+                rel="noopener"
+              >Cartograph playlist</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="spotlight spotlight--nim reveal" data-delay="100">
+          <div class="spotlight-media spotlight-media--nim">
+            <div class="software-brand">
+              <img
+                src="assets/projects/nim-terminal/logo.svg"
+                alt=""
+                class="software-logo software-logo--nim"
+                width="112"
+                height="112"
+              >
+              <p class="software-wordmark">Waymark</p>
+              <p class="software-tagline">nim_terminal</p>
+            </div>
+            <a
+              class="software-video"
+              href="https://youtu.be/BxA0gGwy9rI"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="assets/projects/nim-terminal/demo-thumb.jpg"
+                alt="Waymark terminal emulator demo on YouTube"
+                width="640"
+                height="360"
+                loading="lazy"
+              >
+              <span class="software-video-play" aria-hidden="true"></span>
+              <span class="software-video-label">Terminal demo</span>
+            </a>
+          </div>
+          <div class="spotlight-content">
+            <div class="project-meta">
+              <span class="project-lang">Nim · Terminal</span>
+              <span class="project-featured">Featured</span>
+            </div>
+            <h3 class="spotlight-title">Waymark Terminal</h3>
+            <p class="spotlight-desc">
+              GPU rendered terminal emulator written end to end in Nim, assembled from
+              47 reusable Cartograph widgets. Pure Nim VT parser, screen buffer, UTF-8
+              decoder, glyph atlas, and platform neutral PTY host. The terminal is the
+              showcase; the widgets are the point.
+            </p>
+            <dl class="spotlight-specs">
+              <div>
+                <dt>Architecture</dt>
+                <dd>VT100 parsing, tile batcher, split panes, tab set</dd>
+              </div>
+              <div>
+                <dt>Quality</dt>
+                <dd>Memory soak suite, valgrind tiers, public SUMMARY.md reports</dd>
+              </div>
+              <div>
+                <dt>Stack</dt>
+                <dd>Nim 2.2+, OpenGL, GLFW, Cartograph widget library</dd>
+              </div>
+            </dl>
+            <div class="spotlight-actions">
+              <a
+                class="btn btn-primary"
+                href="https://github.com/benteigland11/nim_terminal"
+                target="_blank"
+                rel="noopener"
+              >GitHub</a>
+              <a
+                class="btn btn-ghost"
+                href="https://youtu.be/BxA0gGwy9rI"
+                target="_blank"
+                rel="noopener"
+              >Watch demo</a>
+            </div>
+          </div>
+        </article>
+
+        <h3 class="projects-more reveal">More software</h3>
+        <div class="project-grid" id="project-grid">
+          <!-- populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-index">03</span>
+          <h2>Skills</h2>
+        </div>
+        <div class="skills-grid reveal" data-delay="100">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <ul class="skill-tags">
+              <li>Python</li>
+              <li>C++</li>
+              <li>VHDL</li>
+              <li>AutoLISP</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Domains</h3>
+            <ul class="skill-tags">
+              <li>Embedded &amp; avionics</li>
+              <li>PCB design &amp; assembly</li>
+              <li>AI agents &amp; MCP</li>
+              <li>Developer tooling</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <ul class="skill-tags">
+              <li>KiCad</li>
+              <li>AutoCAD</li>
+              <li>Git / GitHub</li>
+              <li>Linux</li>
+              <li>Claude / Codex plugins</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-index">04</span>
+          <h2>Contact</h2>
+        </div>
+        <div class="contact-block reveal" data-delay="100">
+          <p class="contact-lead">
+            Interested in agent infrastructure, developer tooling, or roles where
+            careful measurement matters? I'd love to hear from you.
+          </p>
+          <div class="contact-links">
+            <a class="contact-card" href="mailto:benteigland11@gmail.com">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">benteigland11@gmail.com</span>
+            </a>
+            <a class="contact-card" href="https://github.com/benteigland11" target="_blank" rel="noopener">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">benteigland11</span>
+            </a>
+            <a
+              class="contact-card"
+              href="https://www.youtube.com/playlist?list=PLG7OfTaefviJ4RIVtfOHRImppor3bidK-"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="contact-label">YouTube</span>
+              <span class="contact-value">Cartograph Series</span>
+            </a>
+            <span class="contact-card contact-card--static">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Minnesota, USA</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Ben Teigland</span>
+      <span class="footer-note">Built with care · Hosted on GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
