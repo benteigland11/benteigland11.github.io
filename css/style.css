@@ -442,6 +442,32 @@ body::before {
   object-fit: cover;
 }
 
+.spotlight-media--photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.spotlight-photo {
+  margin: 0;
+  min-width: 0;
+}
+
+.spotlight-photo + .spotlight-photo {
+  border-left: 1px solid var(--border);
+}
+
+.spotlight-photo figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 0.5rem 0.75rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
 .spotlight-media--cartograph {
   display: flex;
   flex-direction: column;
@@ -981,6 +1007,15 @@ body::before {
   }
 
   .hero-scroll-hint { display: none; }
+
+  .spotlight-media--photos {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlight-photo + .spotlight-photo {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
